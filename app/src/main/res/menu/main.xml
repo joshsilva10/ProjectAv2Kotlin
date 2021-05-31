@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="userPhoto"
+        android:id="@+id/user_photo"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="always"/>
+    <item
+        android:title="Language"
+        android:id="@+id/Language">
+            <menu
+                android:id="@+id/submenuLingua">
+                <item
+                    android:title="Portugues"
+                    android:id="@+id/portugues"/>
+                <item
+                    android:title="Inglês"
+                    android:id="@+id/English"/>
+            </menu>
+    </item>
+
+    <item
+        android:title="Account"
+        android:id="@+id/account"/>
+    <group
+        android:id="@+id/itensMenu">
+        <item
+            android:title="Stories"
+            android:id="@+id/stories"/>
+        <item
+            android:title="Options"
+            android:id="@+id/options"/>
+        <item
+            android:title="About"
+            android:id="@+id/about"/>
+        <item
+            android:title="Log Out"
+            android:id="@+id/exit"/>
+    </group>
+
+</menu>

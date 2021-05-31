@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Tá Chegando!</string>
+    <string name="email_hint">example@example.com</string>
+    <string name="nome_hint">First and Last Name</string>
+    <string name="cep_hint">Postal Code</string>
+    <string name="endereco_hint">Address</string>
+    <string name="numero_hint">Number</string>
+    <string name="complemento_hint">Complement</string>
+    <string name="telefone_hint">Phone</string>
+    <string name="First_name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="passwordconfirm">Password Repeat</string>
+    <string name="cadastro"><a>Register Now</a></string>
+    <string name="conta">Account</string>
+    <string name="Historico">History</string>
+    <string name="Opcoes">Options</string>
+    <string name="Sobre">About</string>
+    <string name="sair">Log Out</string>
+    <string name="sistema">System</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="confirm">Confirm</string>
+    <string name="galery">Galery</string>
+    <string name="camera">Camera</string>
+    <string name="DataPer">Persona Data</string>
+    <string name="acessar">Access</string>
+    <string name="sobrenos">About Us</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="forgot">Forgot Password?</string>
+</resources>

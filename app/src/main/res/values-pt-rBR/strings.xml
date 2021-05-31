@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tá Chegando!</string>
+    <string name="nome_hint">Nome e Sobrenome</string>
+    <string name="cep_hint">CEP</string>
+    <string name="endereco_hint">Endereço</string>
+    <string name="numero_hint">Numero</string>
+    <string name="complemento_hint">Complemento</string>
+    <string name="telefone_hint">Telefone</string>
+    <string name="First_name">Nome</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="passwordconfirm">Repita a Senha</string>
+    <string name="cadastro"><a>Cadastre-se</a></string>
+    <string name="conta">Conta</string>
+    <string name="Historico">Histórico</string>
+    <string name="Opcoes">Opções</string>
+    <string name="Sobre">Sobre</string>
+    <string name="sair">Sair</string>
+    <string name="email_hint">exemplo@exemplo.com</string>
+    <string name="sistema">Sistema</string>
+    <string name="confirm">Confirmar</string>
+    <string name="DataPer">Dados Pessoais</string>
+    <string name="camera">Câmera</string>
+    <string name="galery">Galeria</string>
+    <string name="acessar">Acessar</string>
+    <string name="sobrenos">Sobre Nós</string>
+    <string name="version">Versão 1.0.0</string>
+    <string name="forgot">Esqueceu a senha?</string>
+</resources>

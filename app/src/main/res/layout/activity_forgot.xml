@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForgotActivity"
+    android:background="#09999A">
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:hint="@string/email_hint"
+        android:background="@drawable/edittext_rounded"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@drawable/common_google_signin_btn_text_light"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Submit"
+        />
+
+
+</LinearLayout>

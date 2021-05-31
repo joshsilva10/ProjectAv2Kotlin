@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09999A"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_tela_login"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ScrollViewCad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/linear_tela_elemento_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo_login"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:contentDescription="LOGO"
+                    android:src="@mipmap/ic_launcher_ta_chegando_layer" />
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Login"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextLogin"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edittext_rounded"
+                    android:ems="10"
+                    android:hint="@string/email_hint"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+
+                <TextView
+                    android:id="@+id/txtSenha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="29dp"
+                    android:text="@string/password"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextSenha"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edittext_rounded"
+                    android:ems="10"
+                    android:hint="PASSWORD"
+                    android:inputType="textPassword"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textResgateSenha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:text="@string/forgot"
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btn_acessar"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="52dp"
+                    android:background="@drawable/edittext_rounded"
+                    android:text="ACESSAR"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textCadastro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:text="@string/cadastro"
+                    android:textAlignment="center"
+                    android:textColorLink="@drawable/common_google_signin_btn_text_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
