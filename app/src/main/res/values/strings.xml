@@ -28,4 +28,5 @@
     <string name="sobrenos">About Us</string>
     <string name="version">Version 1.0.0</string>
     <string name="forgot">Forgot Password?</string>
+    <string name="name">Name</string>
 </resources>

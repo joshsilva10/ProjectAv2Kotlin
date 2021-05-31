@@ -7,17 +7,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_Account"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_account_circle_24"
             android:title="@string/conta"
             />
         <item
             android:id="@+id/nav_history"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_archive_24"
             android:title="@string/Historico"
             />
         <item
             android:id="@+id/nav_option"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_option_24"
             android:title="@string/Opcoes"/>
 
     </group>
@@ -26,11 +26,11 @@
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_nfo_24"
                 android:title="@string/Sobre"/>
             <item
                 android:id="@+id/nav_exit"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_close_24"
                 android:title="@string/sair"/>
         </menu>
     </item>

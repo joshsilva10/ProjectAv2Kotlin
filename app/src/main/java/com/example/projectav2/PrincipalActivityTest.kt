@@ -17,10 +17,10 @@ class PrincipalActivityTest : AppCompatActivity(), NavigationView.OnNavigationIt
         setContentView(R.layout.activity_principal_test)
 
 
-        nav_view2.setNavigationItemSelectedListener(this)
+        nav_view.setNavigationItemSelectedListener(this)
 
 
-        val drawer_layout = findViewById<DrawerLayout>(R.id.drawer_layout2)
+        val drawer_layout = findViewById<DrawerLayout>(R.id.drawer_layout)
         var img = findViewById<ImageView>(R.id.logo_principal)
         img.setOnClickListener {
             drawer_layout.open()

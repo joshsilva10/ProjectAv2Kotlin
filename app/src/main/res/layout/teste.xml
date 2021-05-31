@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="@dimen/nav_header_height1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:foregroundGravity="center"
+            android:layout_marginTop="@dimen/nav_header_height1">
+
+
+
+            <ImageButton
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginTop="5dp"
+                android:layout_width="175dp"
+                android:layout_marginRight="2dp"
+                android:clickable="true"
+                android:background="@drawable/icons_rounded"
+                android:src="@drawable/ic_account_circle_24"
+                android:layout_height="175dp"
+
+                />
+            <ImageButton
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="175dp"
+                android:clickable="true"
+                android:background="@drawable/icons_rounded"
+                android:src="@mipmap/ic_launcher_ta_chegando_layer"
+                android:layout_height="175dp"
+
+                />
+
+            <ImageButton
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/icons_rounded"
+                android:clickable="true"
+                android:src="@mipmap/ic_launcher_ta_chegando_layer"
+                />
+            <ImageButton
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/icons_rounded"
+                android:clickable="true"
+                android:src="@mipmap/ic_launcher_ta_chegando_layer"
+                />
+
+            <ImageButton
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginTop="5dp"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/icons_rounded"
+                android:clickable="true"
+                android:src="@mipmap/ic_launcher_ta_chegando_layer"
+                />
+            <ImageButton
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/icons_rounded"
+                android:clickable="true"
+                android:src="@mipmap/ic_launcher_ta_chegando_layer"
+                />
+
+
+
+
+
+
+        </GridLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

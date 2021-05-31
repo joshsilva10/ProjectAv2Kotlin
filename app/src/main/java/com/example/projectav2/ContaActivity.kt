@@ -7,8 +7,11 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -16,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_conta.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 class ContaActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
@@ -29,6 +33,7 @@ class ContaActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
     private var endereco : String? = null
     private var numeroRes : String? = null
     private var complemento : String? = null
+    private var drawer_layout1:DrawerLayout? = null
 
     //---------
 
@@ -52,17 +57,50 @@ class ContaActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
         var nameacc : TextView = findViewById(R.id.tv_nomeconta)
         var adress : TextView = findViewById(R.id.tv_ender)
-        //var imaes : ImageView = findViewById(R.id.img_conta)
+        var comp   : TextView = findViewById(R.id.Complemento)
+        var num : TextView = findViewById(R.id.tv_number)
+        var cep : TextView = findViewById(R.id.cep)
+        var tel : TextView = findViewById(R.id.telephone)
+
 
         initialize()
 
+         drawer_layout1 = findViewById<DrawerLayout>(R.id.drawer_layout_conta)
+        var img = findViewById<ImageView>(R.id.logo_principal)
+
+        img.setOnClickListener {
+            drawer_layout1!!.open()
+        }
+        nav_view.setNavigationItemSelectedListener(this)
+
+        //---------PEGANDO DADOS DO BANCO--------------\
         var currentUserDb = mDatabaseReference!!.child(userId!!)
+        currentUserDb.child("Name").get().addOnSuccessListener {
+            tv_nomeprincipal.text = it.value.toString()
+            tv_emailprincipal1.text = mAuth?.currentUser?.email.toString()
+        }
         //var currentImageDb = storageReference!!.child(userId!!)
         currentUserDb.child("Name").get().addOnSuccessListener {
-            nameacc.text = it.value.toString()
+            nameacc.text = getString(R.string.name)+": "+it.value.toString()
         }
         currentUserDb.child("Endereco").get().addOnSuccessListener {
-            adress.text = it.value.toString()
+            adress.text = getString(R.string.endereco_hint)+": "+it.value.toString()
+
+        }
+        currentUserDb.child("Complemento").get().addOnSuccessListener {
+            comp.text = getString(R.string.complemento_hint)+": "+it.value.toString()
+
+        }
+        currentUserDb.child("Numero").get().addOnSuccessListener {
+            num.text = getString(R.string.numero_hint)+": "+it.value.toString()
+
+        }
+        currentUserDb.child("CEP").get().addOnSuccessListener {
+            cep.text = getString(R.string.cep_hint)+": "+it.value.toString()
+
+        }
+        currentUserDb.child("Telefone").get().addOnSuccessListener {
+            tel.text = getString(R.string.cep_hint)+": "+it.value.toString()
 
         }
 
@@ -137,7 +175,36 @@ class ContaActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        TODO("Not yet implemented")
+        return when (item.itemId) {
+            R.id.nav_Account -> {
+                drawer_layout1!!.close()
+
+                true
+            }
+            R.id.nav_history -> {
+                Toast.makeText(this,"History", Toast.LENGTH_SHORT).show()
+
+                true
+            }
+            R.id.nav_option ->{
+                Toast.makeText(this,"Options", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.nav_about ->{
+                Toast.makeText(this,"About", Toast.LENGTH_SHORT).show()
+
+                true
+            }
+            R.id.nav_exit ->{
+
+                intent=Intent(this,InitialActivity2::class.java)
+                startActivity(intent)
+                finishAffinity()
+
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
 

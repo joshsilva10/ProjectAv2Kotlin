@@ -10,35 +10,36 @@
     tools:openDrawer="start"
     tools:context=".ContaActivity">
 
-    <include
-        layout="@layout/toolbar_ext"
-        />
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/menu_principal"/>
+
+
     <ScrollView
-        android:paddingTop="75dp"
+        android:layout_marginTop="@dimen/nav_header_height1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
     <LinearLayout
+        android:layout_marginTop="@dimen/nav_header_height1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageView
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="5dp"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:id="@+id/img_conta"
            android:src="@mipmap/ic_launcher" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
         <Button
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_galery"
@@ -49,6 +50,7 @@
             android:text="@string/galery"/>
         <Button
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_camera"
@@ -57,8 +59,11 @@
             android:layout_gravity="center"
             android:background="@drawable/edittext_rounded"
             android:text="@string/camera"/>
+
+        </LinearLayout>
         <Button
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_confirmphoto"
@@ -72,10 +77,11 @@
             android:id="@+id/tv_dataPer"
             android:layout_gravity="center"
             android:text="@string/DataPer"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="5dp"
+            android:textStyle="bold"/>
 
 
             <TextView
@@ -95,24 +101,28 @@
 
 
         <TextView
+            android:id="@+id/tv_number"
             android:layout_gravity="center"
             android:text="title"
             android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:id="@+id/Complemento"
             android:layout_gravity="center"
             android:text="title"
             android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:id="@+id/cep"
             android:layout_gravity="center"
             android:text="title"
             android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            android:id="@+id/telephone"
             android:layout_gravity="center"
             android:text="title"
             android:textSize="20dp"
@@ -120,5 +130,18 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
     </ScrollView>
+
+    <include
+        layout="@layout/toolbar_ext"
+        />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/menu_principal"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
