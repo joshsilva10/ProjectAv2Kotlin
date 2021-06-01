@@ -9,10 +9,13 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     android:background="#09999A"
+    android:layout_gravity="center"
     >
 
-    <include layout="@layout/toolbar_ext" />
     <include layout="@layout/teste"/>
+    <include layout="@layout/toolbar_ext" />
+
+
 
 
 

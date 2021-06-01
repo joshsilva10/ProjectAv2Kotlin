@@ -100,7 +100,7 @@ class ContaActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
         }
         currentUserDb.child("Telefone").get().addOnSuccessListener {
-            tel.text = getString(R.string.cep_hint)+": "+it.value.toString()
+            tel.text = getString(R.string.telefone_hint)+": "+it.value.toString()
 
         }
 
