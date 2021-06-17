@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_principal.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import kotlinx.android.synthetic.main.teste.*
 
 class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -50,6 +51,14 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             tv_nomeprincipal.text = it.value.toString()
             tv_emailprincipal1.text = mAuth?.currentUser?.email.toString()
         }
+        
+        btn_hist.setOnClickListener {
+           // histAccess()
+        }
+        btn_map.setOnClickListener {
+            val intent = Intent(this@PrincipalActivity,MapsActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
@@ -82,7 +91,8 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 true
             }
             R.id.nav_history -> {
-                Toast.makeText(this,"History",Toast.LENGTH_SHORT).show()
+               // Toast.makeText(this,"History",Toast.LENGTH_SHORT).show()
+                //histAccess()
 
                 true
             }
@@ -102,6 +112,12 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    
+    private fun histAccess(){
+        val intent = Intent (this@PrincipalActivity, ListTrackerActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
     }
 }
 

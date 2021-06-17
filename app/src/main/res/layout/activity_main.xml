@@ -110,7 +110,7 @@
                     android:textColor="@color/white"
                     android:layout_marginBottom="52dp"
                     android:background="@drawable/edittext_rounded"
-                    android:text="ACESSAR"
+                    android:text="@string/acessar"
                     android:textAlignment="center" />
 
                 <TextView

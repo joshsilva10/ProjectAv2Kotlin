@@ -34,6 +34,7 @@
 
 
             <ImageButton
+                android:id="@+id/btn_map"
                 android:layout_row="0"
                 android:layout_column="0"
                 android:layout_marginTop="5dp"
@@ -47,6 +48,7 @@
 
                 />
             <ImageButton
+                android:id="@+id/btn_hist"
                 android:layout_row="0"
                 android:layout_column="1"
                 android:layout_marginTop="5dp"
